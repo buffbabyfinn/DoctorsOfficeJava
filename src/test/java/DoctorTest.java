@@ -12,4 +12,9 @@ public class DoctorTest {
     Doctor testDoctor = new Doctor("Deborah Jenkins", "gastroentrology");
     assertEquals(true, testDoctor instanceof Doctor);
   }
+
+  @Test
+  public void all_emptyAtFirst() {
+    assertEquals(Doctor.all().size(), 0);
+  }
 }
