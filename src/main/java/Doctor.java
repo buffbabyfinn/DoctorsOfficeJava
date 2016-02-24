@@ -63,7 +63,7 @@ public class Doctor {
     }
   }
 
-  public List<Patient>getPatients() {
+  public List<Patient> getPatients() {
     try(Connection con = DB.sql2o.open()) {
       String sql = "SELECT * FROM patients where doctorID=:id";
       return con.createQuery(sql)
